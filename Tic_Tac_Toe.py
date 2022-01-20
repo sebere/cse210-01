@@ -10,8 +10,6 @@ def main():
     board_print()
     player_move()
 
- 
-
 
 
 def player_move():
@@ -43,27 +41,27 @@ def move(player):
 
 def winner():
     global champ
-    controlLinea()
-    controlVertical()
-    controlDiagonal()
+    line()
+    vertical()
+    diagonal()
     
-def controlLinea():
+def line():
     global champ
-    if board[0]== board[1]==board[2] !="-":
+    if board[0]== board[1]==board[2] !="1":
         champ = board[0]
-    elif board[3] ==  board[4] == board[5] != "-":
+    elif board[3] ==  board[4] == board[5] != "1":
         champ = board[3]
-    elif board[6] ==  board[7] == board[8] != "-":
+    elif board[6] ==  board[7] == board[8] != "1":
         champ = board[6]
-def controlVertical():
+def vertical():
     global champ
-    if board[0] ==  board[3] == board[6] != "-":
+    if board[0] ==  board[3] == board[6] != "1":
         champ = board[0]
-    elif board[1] ==  board[4] == board[7] != "-":
+    elif board[1] ==  board[4] == board[7] != "1":
         champ = board[1]
-    elif board[2] ==  board[5] == board[8] != "-":
+    elif board[2] ==  board[5] == board[8] != "1":
         champ = board[2]
-def controlDiagonal():
+def diagonal():
     global champ
     if board[0] ==  board[4] == board[8] != "-":
         champ = board[0]
