@@ -13,8 +13,6 @@ playerone = "X"
 champ = None
 game = True
 
-
-
 def main():
     while game:
         print_board(board)
